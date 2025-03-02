@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+# Task Manager - React Native (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Objective
+This project is a React Native app built with Expo, featuring a Node.js and MongoDB backend. Users can sign up, log in, and manage tasks (CRUD operations).
 
-## Get started
+## Features
 
-1. Install dependencies
+### Authentication:
+- **Signup Screen:** Users can register with their name, email, and password.
+- **Login Screen:** Users can log in using their email and password.
+- **Token-based Authentication:** Uses AsyncStorage to store JWT tokens for authentication.
 
+### Task Management:
+- **Home Screen:** Fetches and displays tasks from the backend with a pull-to-refresh feature.
+- **Add Task Screen:** Users can create a task (title + description).
+- **Task Details Screen:** Displays task details and allows users to edit or delete tasks.
+- **Logout:** Provides a logout button that clears the stored token and navigates to the Login screen.
+
+## Tech Stack & Tools
+- **State Management:** Redux Toolkit
+- **Navigation:** React Navigation (Stack Navigator)
+- **Storage:** AsyncStorage (for JWT tokens)
+- **UI Components:** React Native Paper
+
+## Setup Instructions
+
+### Prerequisites:
+- Node.js installed (latest LTS recommended)
+- Expo CLI installed (`npm install -g expo-cli`)
+
+### Steps to Run the App:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd task-manager
+   ```
+2. Install dependencies:
    ```bash
    npm install
    ```
-
-2. Start the app
-
+3. Start the Expo development server:
    ```bash
-    npx expo start
+   npx expo start
+   ```
+4. Scan the QR code from the terminal using the Expo Go app (Android) or use an emulator/simulator.
+
+### Backend Setup (if applicable):
+1. Navigate to the backend folder:
+   ```bash
+   cd backend
+   ```
+2. Install backend dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the backend server:
+   ```bash
+   node server.js
    ```
 
-In the output, you'll find options to open the app in a
+## Login Details (For Testing)
+Use the following test credentials to log in as an existing user:
+- **Email:** `saravanani@gmail.com`
+- **Password:** `Admin@123`
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+## Reset Project
+If you need a fresh start, run:
 ```bash
 npm run reset-project
 ```
+This will reset the project and move the starter code to the `app-example` directory.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Learn More
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [MongoDB Documentation](https://www.mongodb.com/docs/)
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
