@@ -44,7 +44,7 @@ This project is a React Native app built with Expo, featuring a Node.js and Mong
    ```
 4. Scan the QR code from the terminal using the Expo Go app (Android) or use an emulator/simulator.
 
-### Backend Setup (if applicable):
+### Backend Setup :
 1. Navigate to the backend folder:
    ```bash
    cd backend
